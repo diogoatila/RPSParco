@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Empresa xmlns:e="http://www.urlprefeitura.com.br">
+  <CNPJ>03657739000169</CNPJ>
+  <Nome>Empresa teste</Nome>
+  <CodigoMunicipio>4204202</CodigoMunicipio>
+  <InscricaoMunicipal>24082-6</InscricaoMunicipal>
+  <tpAmb>2</tpAmb>
+  <tpEmis>1</tpEmis>
+  <CertificadoInstalado>false</CertificadoInstalado>
+  <CertificadoArquivo>C:\Users\danimaribeiro\SkyDrive\Infoger\Certificados\INFOGER.pfx</CertificadoArquivo>
+  <CertificadoSenha>6siUuL/VMaA=</CertificadoSenha>
+</Empresa>

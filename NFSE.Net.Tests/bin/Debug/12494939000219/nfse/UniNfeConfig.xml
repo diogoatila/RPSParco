@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Empresa xmlns:e="http://www.urlprefeitura.com.br">
+  <CNPJ>12494939000219</CNPJ>
+  <Nome>Parco Brasil LTDA</Nome>
+  <CodigoMunicipio>23453</CodigoMunicipio>
+  <InscricaoMunicipal>4555332</InscricaoMunicipal>
+  <tpAmb>2</tpAmb>
+  <tpEmis>1</tpEmis>
+  <CertificadoInstalado>false</CertificadoInstalado>
+  <CertificadoArquivo>C:\Users\ThinkPad\Documents\Certificados\certificado.txt</CertificadoArquivo>
+  <CertificadoSenha>123456</CertificadoSenha>
+</Empresa>

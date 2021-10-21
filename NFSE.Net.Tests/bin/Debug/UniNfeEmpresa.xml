@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Empresas xmlns:e="http://www.urlprefeitura.com.br">
+  <ListaEmpresas>
+    <InfoEmpresa>
+      <Cnpj>03657739000169</Cnpj>
+      <Nome>Empresa Teste</Nome>
+    </InfoEmpresa>
+    <InfoEmpresa>
+      <Cnpj>12494939000219</Cnpj>
+      <Nome>Parco Brasil LTDA</Nome>
+    </InfoEmpresa>
+    <InfoEmpresa>
+      <Cnpj>28564242000127</Cnpj>
+      <Nome>ModalGR Gestão e Resultados</Nome>
+    </InfoEmpresa>
+  </ListaEmpresas>
+</Empresas>
