@@ -67,6 +67,12 @@
     <Compile Include="BarcodeTest.Designer.cs">
       <DependentUpon>BarcodeTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmConsultarLote.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultarLote.Designer.cs">
+      <DependentUpon>frmConsultarLote.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmParcoRps.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <EmbeddedResource Include="BarcodeTest.resx">
       <DependentUpon>BarcodeTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultarLote.resx">
+      <DependentUpon>frmConsultarLote.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmParcoRps.resx">
       <DependentUpon>frmParcoRps.cs</DependentUpon>

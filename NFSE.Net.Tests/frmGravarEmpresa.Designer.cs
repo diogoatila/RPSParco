@@ -566,6 +566,7 @@
             this.Controls.Add(this.gbConfigPrestador);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmGravarEmpresa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Gravar Informações da Empresa";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tb_conta_demonstrativo_resultadoBindingSource)).EndInit();

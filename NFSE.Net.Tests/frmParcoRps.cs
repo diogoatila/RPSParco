@@ -231,20 +231,7 @@ namespace NFSE.Net.Tests
 
         private void button5_Click(object sender, EventArgs e)
         {
-            try
-            {
-                frmGravarEmpresa gravarEmpresa = new frmGravarEmpresa();
-                gravarEmpresa.ShowDialog();
 
-                var empresa = RetornaEmpresa(true);
-                Empresas.SalvarNovaEmpresa(empresa, "03657739000169", "Empresa Teste");
-
-                //Core.Empresa.CarregarEmpresasConfiguradas();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
         }
 
         private void button6_Click(object sender, EventArgs e)
@@ -362,6 +349,18 @@ namespace NFSE.Net.Tests
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnGravarEmpresa_Click(object sender, EventArgs e)
+        {
+            new frmGravarEmpresa().ShowDialog();
+        }
+
+        private void btnConsultarLote_Click(object sender, EventArgs e)
+        {
+            frmConsultarLote consultarLote = new frmConsultarLote();
+
+            consultarLote.
         }
     }
 }
