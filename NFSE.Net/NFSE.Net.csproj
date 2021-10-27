@@ -87,24 +87,24 @@
     <Compile Include="FolderCompare.cs" />
     <Compile Include="Functions.cs" />
     <Compile Include="GerarXML.cs" />
-    <Compile Include="Interface\IBetha.cs" />
-    <Compile Include="Implementacoes\Betha.cs" />
+    <Compile Include="Interface\IFortaleza.cs" />
+    <Compile Include="Implementacoes\Fortaleza.cs" />
     <Compile Include="Implementacoes\IPM.cs" />
     <Compile Include="Interface\IEmiteNfIPM.cs" />
     <Compile Include="Interface\IEmiteNFSe.cs" />
     <Compile Include="Interface\IEmiteNFSeIPM.cs" />
     <Compile Include="InvocarObjeto.cs" />
-    <Compile Include="Layouts\Betha\CancelarNfseEnvio.cs" />
-    <Compile Include="Layouts\Betha\CancelarNfseResposta.cs" />
-    <Compile Include="Layouts\Betha\Comuns.cs" />
-    <Compile Include="Layouts\Betha\ConsultarLoteRpsEnvio.cs" />
-    <Compile Include="Layouts\Betha\ConsultarLoteRpsResposta.cs" />
-    <Compile Include="Layouts\Betha\ConsultarNfseRpsResposta.cs" />
-    <Compile Include="Layouts\Betha\ConsultarSituacaoLoteRpsEnvio.cs" />
-    <Compile Include="Layouts\Betha\ConsultarSituacaoLoteRpsResposta.cs" />
-    <Compile Include="Layouts\Betha\EnviarLoteRpsEnvio.cs" />
-    <Compile Include="Layouts\Betha\EnviarLoteRpsResposta.cs" />
-    <Compile Include="Layouts\Betha\ConsultarNfseRpsEnvio.cs" />
+    <Compile Include="Layouts\Fortaleza\CancelarNfseEnvio.cs" />
+    <Compile Include="Layouts\Fortaleza\CancelarNfseResposta.cs" />
+    <Compile Include="Layouts\Fortaleza\Comuns.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarLoteRpsEnvio.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarLoteRpsResposta.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarNfseRpsResposta.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarSituacaoLoteRpsEnvio.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarSituacaoLoteRpsResposta.cs" />
+    <Compile Include="Layouts\Fortaleza\EnviarLoteRpsEnvio.cs" />
+    <Compile Include="Layouts\Fortaleza\EnviarLoteRpsResposta.cs" />
+    <Compile Include="Layouts\Fortaleza\ConsultarNfseRpsEnvio.cs" />
     <Compile Include="Layouts\Serializador.cs" />
     <Compile Include="LerXML.cs" />
     <Compile Include="MsgErro.cs" />
@@ -292,6 +292,54 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="schemas\NFSe\DUETO\xmldsig-core-schema20020212.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\cabecalho_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_cancelar_nfse_envio_v02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_cancelar_nfse_resposta_v02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_lote_rps_envio_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_lote_rps_resposta_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_nfse_envio_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_nfse_resposta_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_nfse_rps_envio_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_nfse_rps_resposta_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_situacao_lote_rps_envio_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_consultar_situacao_lote_rps_resposta_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_enviar_lote_rps_envio_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\servico_enviar_lote_rps_resposta_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\tipos_v02.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\tipos_v03.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="schemas\NFSe\FORTALEZA\xmldsig-core-schema20020212_v03.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="schemas\NFSe\GIF\NFSe-Infisc-v1.xsd">

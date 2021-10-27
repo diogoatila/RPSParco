@@ -4,32 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
 {
-    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.17929")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.betha.com.br/e-nota-contribuinte-ws", IsNullable = false)]
-    public class EnviarLoteRpsEnvio
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    public class CancelarNfseReposta
     {
 
-        private tcLoteRps loteRpsField;     
+        private object itemField;
 
         /// <remarks/>
-        public tcLoteRps LoteRps
+        [System.Xml.Serialization.XmlElementAttribute("Cancelamento", typeof(tcCancelamentoNfse))]
+        [System.Xml.Serialization.XmlElementAttribute("ListaMensagemRetorno", typeof(ListaMensagemRetorno), Namespace = "")]
+        public object Item
         {
             get
             {
-                return this.loteRpsField;
+                return this.itemField;
             }
             set
             {
-                this.loteRpsField = value;
+                this.itemField = value;
             }
         }
-       
     }
 }

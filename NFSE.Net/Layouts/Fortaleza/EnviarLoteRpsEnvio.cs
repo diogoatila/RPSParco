@@ -4,32 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
 {
+    /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.17929")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-    public class CancelarNfseReposta
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "https://iss.fortaleza.ce.gov.br/grpfor-iss/ServiceGinfesImplService", IsNullable = false)]
+    public class EnviarLoteRpsEnvio
     {
 
-        private object itemField;
+        private tcLoteRps loteRpsField;     
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("Cancelamento", typeof(tcCancelamentoNfse))]
-        [System.Xml.Serialization.XmlElementAttribute("ListaMensagemRetorno", typeof(ListaMensagemRetorno), Namespace = "")]
-        public object Item
+        public tcLoteRps LoteRps
         {
             get
             {
-                return this.itemField;
+                return this.loteRpsField;
             }
             set
             {
-                this.itemField = value;
+                this.loteRpsField = value;
             }
         }
+       
     }
 }

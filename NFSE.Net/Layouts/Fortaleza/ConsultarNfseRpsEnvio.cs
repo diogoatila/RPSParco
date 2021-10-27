@@ -1,13 +1,13 @@
 ﻿using System.Xml.Serialization;
 
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
 {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.betha.com.br/e-nota-contribuinte-ws", IsNullable = false)]
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "https://iss.fortaleza.ce.gov.br/grpfor-iss/ServiceGinfesImplService", IsNullable = false)]
     public class ConsultarNfsePorRpsEnvio
     {
 

@@ -35,7 +35,7 @@ namespace NFSE.Net.Envio
 
                 case PadroesNFSe.BETHA:
                     wsProxy = new WebServiceProxy(empresa.X509Certificado);
-                    wsProxy.Betha = new Betha();
+                    wsProxy.Betha = new Fortaleza();
                     break;
 
                 case PadroesNFSe.THEMA:

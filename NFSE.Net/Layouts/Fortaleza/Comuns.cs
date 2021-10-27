@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
+
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.17929")]

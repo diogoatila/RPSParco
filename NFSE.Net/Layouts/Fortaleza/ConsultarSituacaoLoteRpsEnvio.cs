@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.17929")]
@@ -12,41 +12,38 @@ namespace NFSE.Net.Layouts.Betha
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-    public class ConsultarLoteRpsResposta
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "https://iss.fortaleza.ce.gov.br/grpfor-iss/ServiceGinfesImplService", IsNullable = false)]
+    public class ConsultarSituacaoLoteRpsEnvio
     {
 
-        private ConsultarLoteRpsRespostaListaNfse listaNfseField;
+        private tcIdentificacaoPrestador prestadorField;
 
-        private ListaMensagemRetorno listaMensagemRetornoField;
+        private string protocoloField;
 
         /// <remarks/>
-        public ConsultarLoteRpsRespostaListaNfse ListaNfse
+        public tcIdentificacaoPrestador Prestador
         {
             get
             {
-                return this.listaNfseField;
+                return this.prestadorField;
             }
             set
             {
-                this.listaNfseField = value;
+                this.prestadorField = value;
             }
         }
 
         /// <remarks/>
-        public ListaMensagemRetorno ListaMensagemRetorno
+        public string Protocolo
         {
             get
             {
-                return this.listaMensagemRetornoField;
+                return this.protocoloField;
             }
             set
             {
-                this.listaMensagemRetornoField = value;
+                this.protocoloField = value;
             }
         }
-
-
-
     }
 }

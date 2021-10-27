@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace NFSE.Net
 {
-    public interface IBetha
+    public interface IFortaleza
     {
         IWebProxy Proxy { get; set; }
 

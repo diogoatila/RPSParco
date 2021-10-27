@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NFSE.Net.Layouts.Betha
+namespace NFSE.Net.Layouts.Fortaleza
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.0.30319.17929")]
@@ -12,38 +12,41 @@ namespace NFSE.Net.Layouts.Betha
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true, Namespace = "")]
-    [System.Xml.Serialization.XmlRootAttribute(Namespace = "http://www.betha.com.br/e-nota-contribuinte-ws", IsNullable = false)]
-    public class ConsultarLoteRpsEnvio
+    [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
+    public class ConsultarLoteRpsResposta
     {
-        private tcIdentificacaoPrestador prestadorField;
 
-        private string protocoloField;
+        private ConsultarLoteRpsRespostaListaNfse listaNfseField;
+
+        private ListaMensagemRetorno listaMensagemRetornoField;
 
         /// <remarks/>
-        public tcIdentificacaoPrestador Prestador
+        public ConsultarLoteRpsRespostaListaNfse ListaNfse
         {
             get
             {
-                return this.prestadorField;
+                return this.listaNfseField;
             }
             set
             {
-                this.prestadorField = value;
+                this.listaNfseField = value;
             }
         }
 
         /// <remarks/>
-        public string Protocolo
+        public ListaMensagemRetorno ListaMensagemRetorno
         {
             get
             {
-                return this.protocoloField;
+                return this.listaMensagemRetornoField;
             }
             set
             {
-                this.protocoloField = value;
+                this.listaMensagemRetornoField = value;
             }
         }
+
+
 
     }
 }
