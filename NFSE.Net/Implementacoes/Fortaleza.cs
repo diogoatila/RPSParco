@@ -23,9 +23,9 @@ namespace NFSE.Net.Implementacoes
             StringBuilder retornar = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
             string url;
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/cancelarNfse";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/cancelarNfse";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/cancelarNfse";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/cancelarNfse";
 
             string XMLRetorno = RequestWS(xml, url, "#CancelarNEV01Service");
 
@@ -51,9 +51,9 @@ namespace NFSE.Net.Implementacoes
 
             string url;
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/consultarLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/consultarLoteRps";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarLoteRps";
 
             string XMLRetorno = RequestWS(xml, url, "#ConsultarLoteRpsService");
 
@@ -79,9 +79,9 @@ namespace NFSE.Net.Implementacoes
 
             string url;
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/consultarSituacaoLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/consultarSituacaoLoteRps";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarSituacaoLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarSituacaoLoteRps";
 
             string XMLRetorno = RequestWS(xml, url, "#ConsultarSituacaoLoteRpsService");
 
@@ -108,9 +108,9 @@ namespace NFSE.Net.Implementacoes
             string url;
 
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/recepcionarLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/recepcionarLoteRps";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/recepcionarLoteRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/recepcionarLoteRps";
 
             string XMLRetorno = RequestWS(xml, url, "#RecepcionarLoteRpsService");
 
@@ -185,7 +185,7 @@ namespace NFSE.Net.Implementacoes
             StringBuilder env = new StringBuilder("<?xml version=\"1.0\" encoding=\"UTF-8\"?>");
 
             env.Append("<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\" xmlns:e=\""
-                    + "http://www.betha.com.br/e-nota-contribuinte-ws" + "\">");
+                    + "http://www.Fortaleza.com.br/e-nota-contribuinte-ws" + "\">");
             env.Append("<soapenv:Header/>");
             env.Append("<soapenv:Body>");
 
@@ -210,9 +210,9 @@ namespace NFSE.Net.Implementacoes
 
             string url;
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/consultarNfse";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/consultarNfse";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarNfse";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarNfse";
 
             string XMLRetorno = RequestWS(xml, url, "#ConsultarNfseService");
 
@@ -238,9 +238,9 @@ namespace NFSE.Net.Implementacoes
 
             string url;
             if (tpAmb == Propriedade.TipoAmbiente.taProducao)
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-ws/consultarNfsePorRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-ws/consultarNfsePorRps";
             else
-                url = @"http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarNfsePorRps";
+                url = @"http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarNfsePorRps";
 
             string XMLRetorno = RequestWS(xml, url, "#ConsultarNfsePorRpsService");
 

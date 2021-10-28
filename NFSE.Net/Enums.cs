@@ -106,9 +106,9 @@ namespace NFSE.Net
         /// </summary>
         GINFES,
         /// <summary>
-        /// Padrão da BETHA Sistemas
+        /// Padrão da Fortaleza Sistemas
         /// </summary>
-        BETHA,
+        Fortaleza,
         /// <summary>
         /// Padrão da THEMA Informática
         /// </summary>

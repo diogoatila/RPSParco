@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<EnviarLoteRpsEnvio xmlns:e="http://www.urlprefeitura.com.br" xmlns="https://iss.fortaleza.ce.gov.br/grpfor-iss/ServiceGinfesImplService">
+  <LoteRps Id="1400" xmlns="">
+    <NumeroLote>1400</NumeroLote>
+    <Cnpj>03657739000169</Cnpj>
+    <InscricaoMunicipal>24082-6</InscricaoMunicipal>
+    <QuantidadeRps>1</QuantidadeRps>
+    <ListaRps>
+      <Rps>
+        <InfRps Id="rps1AA">
+          <IdentificacaoRps>
+            <Numero>1</Numero>
+            <Serie>AA</Serie>
+            <Tipo>1</Tipo>
+          </IdentificacaoRps>
+          <DataEmissao>2021-10-28T11:30:43</DataEmissao>
+          <NaturezaOperacao>1</NaturezaOperacao>
+          <RegimeEspecialTributacao>1</RegimeEspecialTributacao>
+          <OptanteSimplesNacional>1</OptanteSimplesNacional>
+          <IncentivadorCultural>2</IncentivadorCultural>
+          <Status>1</Status>
+          <Servico>
+            <Valores>
+              <ValorServicos>1</ValorServicos>
+              <IssRetido>2</IssRetido>
+              <ValorIss>0.04</ValorIss>
+              <BaseCalculo>1</BaseCalculo>
+              <Aliquota>4</Aliquota>
+            </Valores>
+            <ItemListaServico>0105</ItemListaServico>
+            <Discriminacao>Serviço de venda</Discriminacao>
+            <CodigoMunicipio>4204202</CodigoMunicipio>
+          </Servico>
+          <Prestador>
+            <Cnpj>03657739000169</Cnpj>
+            <InscricaoMunicipal>24082-6</InscricaoMunicipal>
+          </Prestador>
+          <Tomador>
+            <IdentificacaoTomador>
+              <CpfCnpj>
+                <Cnpj>09072780000150</Cnpj>
+              </CpfCnpj>
+            </IdentificacaoTomador>
+            <RazaoSocial>Mecanica Boa Viagem</RazaoSocial>
+            <Endereco>
+              <Endereco>Rua do comercio</Endereco>
+              <Numero>15</Numero>
+              <Bairro>Centro</Bairro>
+              <CodigoMunicipio>4204350</CodigoMunicipio>
+              <Uf>SC</Uf>
+              <Cep>88032050</Cep>
+            </Endereco>
+            <Contato>
+              <Telefone>32386621</Telefone>
+              <Email>email@email.com.br</Email>
+            </Contato>
+          </Tomador>
+          <CondicaoPagamento>
+            <Condicao>3- A Prazo</Condicao>
+            <QtdParcela>2</QtdParcela>
+            <Parcelas>
+              <Parcela>0</Parcela>
+              <DataVencimento>28/10/2021 11:30:43</DataVencimento>
+              <Valor>0</Valor>
+            </Parcelas>
+          </CondicaoPagamento>
+        </InfRps>
+      </Rps>
+    </ListaRps>
+  </LoteRps>
+</EnviarLoteRpsEnvio>

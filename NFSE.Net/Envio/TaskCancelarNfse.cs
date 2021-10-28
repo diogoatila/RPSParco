@@ -52,9 +52,9 @@ namespace NFSE.Net.Envio
                     cabecMsg = ""; //Cancelamento ainda tá na versão 2.0 então não tem o cabecMsg
                     break;
 
-                case PadroesNFSe.BETHA:
+                case PadroesNFSe.Fortaleza:
                     wsProxy = new WebServiceProxy(empresa.X509Certificado);
-                    wsProxy.Betha = new Fortaleza();
+                    wsProxy.Fortaleza = new Fortaleza();
                     break;
 
                 case PadroesNFSe.THEMA:

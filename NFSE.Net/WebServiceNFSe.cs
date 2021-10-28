@@ -93,8 +93,8 @@ namespace NFSE.Net
                             "</LocalHomologacao>";
                 #endregion
 
-                #region BETHA
-                case PadroesNFSe.BETHA:
+                #region Fortaleza
+                case PadroesNFSe.Fortaleza:
                     return "<LocalHomologacao>" +
                             @"<RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>" +
                             @"<ConsultarSituacaoLoteRps>wsdl\homologacao\HBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>" +
@@ -377,8 +377,8 @@ namespace NFSE.Net
                             "</LocalProducao>";
                 #endregion
 
-                #region BETHA
-                case PadroesNFSe.BETHA:
+                #region Fortaleza
+                case PadroesNFSe.Fortaleza:
                     return "<LocalProducao>" +
                             @"<RecepcionarLoteRps>wsdl\producao\PBethaRecepcionarLoteRPS.wsdl</RecepcionarLoteRps>" +
                             @"<ConsultarSituacaoLoteRps>wsdl\producao\PBethaConsultarSituacaoLoteRPS.wsdl</ConsultarSituacaoLoteRps>" +

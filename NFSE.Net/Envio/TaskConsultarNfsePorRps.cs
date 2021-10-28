@@ -33,9 +33,9 @@ namespace NFSE.Net.Envio
                     cabecMsg = "<ns2:cabecalho versao=\"3\" xmlns:ns2=\"http://www.ginfes.com.br/cabecalho_v03.xsd\"><versaoDados>3</versaoDados></ns2:cabecalho>";
                     break;
 
-                case PadroesNFSe.BETHA:
+                case PadroesNFSe.Fortaleza:
                     wsProxy = new WebServiceProxy(empresa.X509Certificado);
-                    wsProxy.Betha = new Fortaleza();
+                    wsProxy.Fortaleza = new Fortaleza();
                     break;
 
                 case PadroesNFSe.THEMA:

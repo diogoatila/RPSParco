@@ -1,4 +1,4 @@
-﻿using NFSE.Net.Layouts.Betha;
+﻿using NFSE.Net.Layouts.Fortaleza;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace NFSE.Net.Envio
 {
     public class EnvioCompleto
     {
-        public void SalvarLoteRps(Layouts.Betha.EnviarLoteRpsEnvio lote, Core.ArquivosEnvio localArquivos)
+        public void SalvarLoteRps(Layouts.Fortaleza.EnviarLoteRpsEnvio lote, Core.ArquivosEnvio localArquivos)
         {
             if (string.IsNullOrWhiteSpace(localArquivos.SalvarEnvioLoteEm))
                 throw new ArgumentNullException("localArquivos.SalvarEnvioLoteEm");
@@ -17,7 +17,7 @@ namespace NFSE.Net.Envio
                 System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(localArquivos.SalvarEnvioLoteEm));
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.EnviarLoteRpsEnvio>(lote, localArquivos.SalvarEnvioLoteEm);
+            serializar.SalvarXml<Layouts.Fortaleza.EnviarLoteRpsEnvio>(lote, localArquivos.SalvarEnvioLoteEm);
         }
 
         public Core.RespostaEnvioNFSe EnviarLoteRps(Core.Empresa empresa, Core.ArquivosEnvio localArquivos)
@@ -26,7 +26,7 @@ namespace NFSE.Net.Envio
             {
                 var serializar = new Layouts.Serializador();
                 var envio = new NFSE.Net.Envio.Processar();
-                var lote = serializar.LerXml<Layouts.Betha.EnviarLoteRpsEnvio>(localArquivos.SalvarEnvioLoteEm);
+                var lote = serializar.LerXml<Layouts.Fortaleza.EnviarLoteRpsEnvio>(localArquivos.SalvarEnvioLoteEm);
 
                 ExecutarConsultas(() =>
                 {
@@ -34,7 +34,7 @@ namespace NFSE.Net.Envio
                 });
 
                 bool erro = false;
-                var respostaEnvioLote = serializar.TryLerXml<Layouts.Betha.EnviarLoteRpsResposta>(localArquivos.SalvarRetornoEnvioLoteEm, out erro);
+                var respostaEnvioLote = serializar.TryLerXml<Layouts.Fortaleza.EnviarLoteRpsResposta>(localArquivos.SalvarRetornoEnvioLoteEm, out erro);
                 while (true)
                 {
                     System.Threading.Thread.Sleep(1000);
@@ -63,13 +63,13 @@ namespace NFSE.Net.Envio
             }
         }
 
-        public Core.RespostaCancelamentoNfse CancelarNfse(Layouts.Betha.CancelarNfseEnvio envioCancelamento, Core.Empresa empresa, Core.ArquivosEnvio localArquivos)
+        public Core.RespostaCancelamentoNfse CancelarNfse(Layouts.Fortaleza.CancelarNfseEnvio envioCancelamento, Core.Empresa empresa, Core.ArquivosEnvio localArquivos)
         {
             try
             {
                 ValidarCaminhos(localArquivos);
                 var serializar = new Layouts.Serializador();
-                serializar.SalvarXml<Layouts.Betha.CancelarNfseEnvio>(envioCancelamento, localArquivos.SalvarCancelarNfseEnvioEm);
+                serializar.SalvarXml<Layouts.Fortaleza.CancelarNfseEnvio>(envioCancelamento, localArquivos.SalvarCancelarNfseEnvioEm);
 
                 var envio = new NFSE.Net.Envio.Processar();
                 ExecutarConsultas(() =>
@@ -78,7 +78,7 @@ namespace NFSE.Net.Envio
                 });
 
                 bool erro = false;
-                var respostaEnvioLote = serializar.TryLerXml<Layouts.Betha.CancelarNfseReposta>(localArquivos.SalvarCancelarNfseRespostaEm, out erro);
+                var respostaEnvioLote = serializar.TryLerXml<Layouts.Fortaleza.CancelarNfseReposta>(localArquivos.SalvarCancelarNfseRespostaEm, out erro);
                 if (respostaEnvioLote != null)
                 {
                     if (respostaEnvioLote.Item is ListaMensagemRetorno)
@@ -110,16 +110,16 @@ namespace NFSE.Net.Envio
             }
         }
 
-        private Layouts.Betha.ConsultarSituacaoLoteRpsResposta ConsultarSituacaoLote(Core.Empresa empresa, EnviarLoteRpsResposta protocolo, Core.ArquivosEnvio localArquivos)
+        private Layouts.Fortaleza.ConsultarSituacaoLoteRpsResposta ConsultarSituacaoLote(Core.Empresa empresa, EnviarLoteRpsResposta protocolo, Core.ArquivosEnvio localArquivos)
         {
-            var consultaSituacaoLote = new Layouts.Betha.ConsultarSituacaoLoteRpsEnvio();
-            consultaSituacaoLote.Prestador = new Layouts.Betha.tcIdentificacaoPrestador();
+            var consultaSituacaoLote = new Layouts.Fortaleza.ConsultarSituacaoLoteRpsEnvio();
+            consultaSituacaoLote.Prestador = new Layouts.Fortaleza.tcIdentificacaoPrestador();
             consultaSituacaoLote.Prestador.Cnpj = empresa.CNPJ;
             consultaSituacaoLote.Prestador.InscricaoMunicipal = empresa.InscricaoMunicipal;
             consultaSituacaoLote.Protocolo = protocolo.Items[2].ToString();
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.ConsultarSituacaoLoteRpsEnvio>(consultaSituacaoLote, localArquivos.SalvarConsultaSituacaoLoteEm);
+            serializar.SalvarXml<Layouts.Fortaleza.ConsultarSituacaoLoteRpsEnvio>(consultaSituacaoLote, localArquivos.SalvarConsultaSituacaoLoteEm);
 
             var envio = new NFSE.Net.Envio.Processar();
             ExecutarConsultas(() =>
@@ -127,19 +127,19 @@ namespace NFSE.Net.Envio
                 envio.ProcessaArquivo(empresa, localArquivos.SalvarConsultaSituacaoLoteEm, localArquivos.SalvarRetornoConsultaSituacaoLoteEm, Servicos.ConsultarSituacaoLoteRps);
             });
 
-            return serializar.LerXml<Layouts.Betha.ConsultarSituacaoLoteRpsResposta>(localArquivos.SalvarRetornoConsultaSituacaoLoteEm);
+            return serializar.LerXml<Layouts.Fortaleza.ConsultarSituacaoLoteRpsResposta>(localArquivos.SalvarRetornoConsultaSituacaoLoteEm);
         }
 
-        private Layouts.Betha.ConsultarLoteRpsResposta ConsultarLote(Core.Empresa empresa, EnviarLoteRpsResposta protocolo, Core.ArquivosEnvio localArquivos)
+        private Layouts.Fortaleza.ConsultarLoteRpsResposta ConsultarLote(Core.Empresa empresa, EnviarLoteRpsResposta protocolo, Core.ArquivosEnvio localArquivos)
         {
-            var consultaSituacaoLote = new Layouts.Betha.ConsultarLoteRpsEnvio();
+            var consultaSituacaoLote = new Layouts.Fortaleza.ConsultarLoteRpsEnvio();
             consultaSituacaoLote.Prestador = new tcIdentificacaoPrestador();
             consultaSituacaoLote.Prestador.Cnpj = empresa.CNPJ;
             consultaSituacaoLote.Prestador.InscricaoMunicipal = empresa.InscricaoMunicipal;
             consultaSituacaoLote.Protocolo = protocolo.Items[2].ToString();
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.ConsultarLoteRpsEnvio>(consultaSituacaoLote, localArquivos.SalvarConsultaLoteRpsEnvioEm);
+            serializar.SalvarXml<Layouts.Fortaleza.ConsultarLoteRpsEnvio>(consultaSituacaoLote, localArquivos.SalvarConsultaLoteRpsEnvioEm);
 
             var envio = new NFSE.Net.Envio.Processar();
 
@@ -148,19 +148,19 @@ namespace NFSE.Net.Envio
                 envio.ProcessaArquivo(empresa, localArquivos.SalvarConsultaLoteRpsEnvioEm, localArquivos.SalvarConsultaLoteRpsRespostaEm, Servicos.ConsultarLoteRps);
             });
 
-            return serializar.LerXml<Layouts.Betha.ConsultarLoteRpsResposta>(localArquivos.SalvarConsultaLoteRpsRespostaEm);
+            return serializar.LerXml<Layouts.Fortaleza.ConsultarLoteRpsResposta>(localArquivos.SalvarConsultaLoteRpsRespostaEm);
         }
 
-        private Layouts.Betha.ConsultarNfseRpsResposta ConsultarRps(Core.Empresa empresa, tcIdentificacaoRps rps, Core.ArquivosEnvio localArquivos)
+        private Layouts.Fortaleza.ConsultarNfseRpsResposta ConsultarRps(Core.Empresa empresa, tcIdentificacaoRps rps, Core.ArquivosEnvio localArquivos)
         {
-            var consultaRps = new Layouts.Betha.ConsultarNfsePorRpsEnvio();
+            var consultaRps = new Layouts.Fortaleza.ConsultarNfsePorRpsEnvio();
             consultaRps.Prestador = new tcIdentificacaoPrestador();
             consultaRps.Prestador.Cnpj = empresa.CNPJ;
             consultaRps.Prestador.InscricaoMunicipal = empresa.InscricaoMunicipal;
             consultaRps.IdentificacaoRps = rps;
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.ConsultarNfsePorRpsEnvio>(consultaRps, localArquivos.SalvarConsultaLoteRpsEnvioEm);
+            serializar.SalvarXml<Layouts.Fortaleza.ConsultarNfsePorRpsEnvio>(consultaRps, localArquivos.SalvarConsultaLoteRpsEnvioEm);
 
             var envio = new NFSE.Net.Envio.Processar();
 
@@ -169,10 +169,10 @@ namespace NFSE.Net.Envio
                 envio.ProcessaArquivo(empresa, localArquivos.SalvarConsultaLoteRpsEnvioEm, localArquivos.SalvarConsultaLoteRpsRespostaEm, Servicos.ConsultarNfsePorRps);
             });
 
-            return serializar.LerXml<Layouts.Betha.ConsultarNfseRpsResposta>(localArquivos.SalvarConsultaLoteRpsRespostaEm);
+            return serializar.LerXml<Layouts.Fortaleza.ConsultarNfseRpsResposta>(localArquivos.SalvarConsultaLoteRpsRespostaEm);
         }
 
-        private Core.RespostaEnvioNFSe MontarResposta(Layouts.Betha.EnviarLoteRpsEnvio lote, ListaMensagemRetorno listaRetorno, ConsultarLoteRpsRespostaListaNfse respostaConsulta, ConsultarNfseRpsResposta respostaRps)
+        private Core.RespostaEnvioNFSe MontarResposta(Layouts.Fortaleza.EnviarLoteRpsEnvio lote, ListaMensagemRetorno listaRetorno, ConsultarLoteRpsRespostaListaNfse respostaConsulta, ConsultarNfseRpsResposta respostaRps)
         {
             var resposta = new Core.RespostaEnvioNFSe();
             int indice = 0;

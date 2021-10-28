@@ -48,12 +48,12 @@
 <Registro ID="3548500" Nome="Santos - SP" Padrao="GINFES" />
 <Registro ID="3548807" Nome="São Caetano do Sul - SP" Padrao="GINFES" />
 <Registro ID="3169901" Nome="Ubá - MG" Padrao="GINFES" />
-<Registro ID="4118402" Nome="Paranavaí - PR" Padrao="BETHA" />
-<Registro ID="4100400" Nome="Almirante Tamandaré - PR" Padrao="BETHA" />
-<Registro ID="4209300" Nome="Lages - SC" Padrao="BETHA" />
-<Registro ID="4208302" Nome="Itapema - SC" Padrao="BETHA" />
-<Registro ID="4204608" Nome="Criciúma - SC" Padrao="BETHA" />
-<Registro ID="4302105" Nome="Bento Gonçalves - RS" Padrao="BETHA" />
+<Registro ID="4118402" Nome="Paranavaí - PR" Padrao="Fortaleza" />
+<Registro ID="4100400" Nome="Almirante Tamandaré - PR" Padrao="Fortaleza" />
+<Registro ID="4209300" Nome="Lages - SC" Padrao="Fortaleza" />
+<Registro ID="4208302" Nome="Itapema - SC" Padrao="Fortaleza" />
+<Registro ID="4204608" Nome="Criciúma - SC" Padrao="Fortaleza" />
+<Registro ID="4302105" Nome="Bento Gonçalves - RS" Padrao="Fortaleza" />
 <Registro ID="4318705" Nome="São Leopoldo - RS" Padrao="THEMA" />
 <Registro ID="4303103" Nome="Cachoeirinha - RS" Padrao="THEMA" />
 <Registro ID="4313409" Nome="Novo Hamburgo - RS" Padrao="ISSNET" />
@@ -67,5 +67,5 @@
 <Registro ID="2910800" Nome="Feira de Santana - BA" Padrao="WEBISS" />
 <Registro ID="3550308" Nome="São Paulo - SP" Padrao="PAULISTANA" />
 <Registro ID="4314050" Nome="Parobé - RS" Padrao="GIF" />
-<Registro ID="4204202" Nome="Chapecó - SC" Padrao="BETHA" />
+<Registro ID="4204202" Nome="Chapecó - SC" Padrao="Fortaleza" />
 </nfes_municipios>

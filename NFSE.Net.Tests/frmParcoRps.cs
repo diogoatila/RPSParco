@@ -56,8 +56,8 @@ namespace NFSE.Net.Tests
         {
             string caminhoXml = @"C:\Users\danimaribeiro\Documents\Nota_Servico\NOVOS_RPS\1-consulta-situacao-lote.xml";
 
-            var consultaSituacaoLote = new Layouts.Betha.ConsultarSituacaoLoteRpsEnvio();
-            consultaSituacaoLote.Prestador = new Layouts.Betha.tcIdentificacaoPrestador();
+            var consultaSituacaoLote = new Layouts.Fortaleza.ConsultarSituacaoLoteRpsEnvio();
+            consultaSituacaoLote.Prestador = new Layouts.Fortaleza.tcIdentificacaoPrestador();
             consultaSituacaoLote.Prestador.Cnpj = "03657739000169";
             consultaSituacaoLote.Prestador.InscricaoMunicipal = "24082-6";
             consultaSituacaoLote.Protocolo = "855426049227311";
@@ -66,7 +66,7 @@ namespace NFSE.Net.Tests
                 System.IO.File.Delete(caminhoXml);
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.ConsultarSituacaoLoteRpsEnvio>(consultaSituacaoLote, caminhoXml);
+            serializar.SalvarXml<Layouts.Fortaleza.ConsultarSituacaoLoteRpsEnvio>(consultaSituacaoLote, caminhoXml);
 
             caminhoXml = @"C:\Users\danimaribeiro\Documents\Visual Studio 2012\Projects\NFSE.Net\NFSE.Net.Tests\bin\Debug\PastaRetorno\1-env.xml-ret-loterps.xml";
             System.Net.ServicePointManager.Expect100Continue = false;
@@ -91,7 +91,7 @@ namespace NFSE.Net.Tests
             envio.ProcessaArquivo(empresa, caminhoXml, caminhoSalvar, Servicos.ConsultarLoteRps);
 
             var serializar = new Layouts.Serializador();
-            var retorno = serializar.LerXml<Layouts.Betha.ConsultarLoteRpsResposta>(caminhoSalvar);
+            var retorno = serializar.LerXml<Layouts.Fortaleza.ConsultarLoteRpsResposta>(caminhoSalvar);
 
             System.Diagnostics.Process.Start(retorno.ListaNfse.ComplNfse[0].Nfse.InfNfse.OutrasInformacoes);
 
@@ -101,28 +101,28 @@ namespace NFSE.Net.Tests
         {
             string caminhoXml = @"C:\NotasEletronicas\nfse\1-env.xml";
 
-            Layouts.Betha.EnviarLoteRpsEnvio envio = RetornarRps();
+            Layouts.Fortaleza.EnviarLoteRpsEnvio envio = RetornarRps();
 
             if (System.IO.File.Exists(caminhoXml))
                 System.IO.File.Delete(caminhoXml);
 
             var serializar = new Layouts.Serializador();
-            serializar.SalvarXml<Layouts.Betha.EnviarLoteRpsEnvio>(envio, caminhoXml);
+            serializar.SalvarXml<Layouts.Fortaleza.EnviarLoteRpsEnvio>(envio, caminhoXml);
         }
 
-        private static Layouts.Betha.EnviarLoteRpsEnvio RetornarRps()
+        private static Layouts.Fortaleza.EnviarLoteRpsEnvio RetornarRps()
         {
-            Layouts.Betha.EnviarLoteRpsEnvio envio = new Layouts.Betha.EnviarLoteRpsEnvio();
-            envio.LoteRps = new Layouts.Betha.tcLoteRps();
+            Layouts.Fortaleza.EnviarLoteRpsEnvio envio = new Layouts.Fortaleza.EnviarLoteRpsEnvio();
+            envio.LoteRps = new Layouts.Fortaleza.tcLoteRps();
             envio.LoteRps.Cnpj = "03657739000169";
             envio.LoteRps.Id = "1400";
             envio.LoteRps.InscricaoMunicipal = "24082-6";
             envio.LoteRps.NumeroLote = "1400";
             envio.LoteRps.QuantidadeRps = 1;
-            envio.LoteRps.ListaRps = new Layouts.Betha.tcRps[1] { new Layouts.Betha.tcRps() };
-            envio.LoteRps.ListaRps[0].InfRps = new Layouts.Betha.tcInfRps();
+            envio.LoteRps.ListaRps = new Layouts.Fortaleza.tcRps[1] { new Layouts.Fortaleza.tcRps() };
+            envio.LoteRps.ListaRps[0].InfRps = new Layouts.Fortaleza.tcInfRps();
             envio.LoteRps.ListaRps[0].InfRps.Id = "rps1AA";
-            envio.LoteRps.ListaRps[0].InfRps.IdentificacaoRps = new Layouts.Betha.tcIdentificacaoRps();
+            envio.LoteRps.ListaRps[0].InfRps.IdentificacaoRps = new Layouts.Fortaleza.tcIdentificacaoRps();
             envio.LoteRps.ListaRps[0].InfRps.IdentificacaoRps.Numero = "1";
             envio.LoteRps.ListaRps[0].InfRps.IdentificacaoRps.Serie = "AA";
             envio.LoteRps.ListaRps[0].InfRps.IdentificacaoRps.Tipo = 1;
@@ -134,11 +134,11 @@ namespace NFSE.Net.Tests
             envio.LoteRps.ListaRps[0].InfRps.IncentivadorCultural = 2;
             envio.LoteRps.ListaRps[0].InfRps.Status = 1;
 
-            envio.LoteRps.ListaRps[0].InfRps.Servico = new Layouts.Betha.tcDadosServico();
+            envio.LoteRps.ListaRps[0].InfRps.Servico = new Layouts.Fortaleza.tcDadosServico();
             envio.LoteRps.ListaRps[0].InfRps.Servico.ItemListaServico = "0105";
             envio.LoteRps.ListaRps[0].InfRps.Servico.Discriminacao = "Serviço de venda";
             envio.LoteRps.ListaRps[0].InfRps.Servico.CodigoMunicipio = 4204202;
-            envio.LoteRps.ListaRps[0].InfRps.Servico.Valores = new Layouts.Betha.tcValores();
+            envio.LoteRps.ListaRps[0].InfRps.Servico.Valores = new Layouts.Fortaleza.tcValores();
             envio.LoteRps.ListaRps[0].InfRps.Servico.Valores.ValorServicos = 1;
             envio.LoteRps.ListaRps[0].InfRps.Servico.Valores.IssRetido = 2;
             envio.LoteRps.ListaRps[0].InfRps.Servico.Valores.ValorIss = 0.04M;
@@ -148,15 +148,15 @@ namespace NFSE.Net.Tests
             envio.LoteRps.ListaRps[0].InfRps.Servico.Valores.Aliquota = 4;
             envio.LoteRps.ListaRps[0].InfRps.Servico.Valores.AliquotaSpecified = true;
 
-            envio.LoteRps.ListaRps[0].InfRps.Prestador = new Layouts.Betha.tcIdentificacaoPrestador();
+            envio.LoteRps.ListaRps[0].InfRps.Prestador = new Layouts.Fortaleza.tcIdentificacaoPrestador();
             envio.LoteRps.ListaRps[0].InfRps.Prestador.Cnpj = "03657739000169";
             envio.LoteRps.ListaRps[0].InfRps.Prestador.InscricaoMunicipal = "24082-6";
 
-            envio.LoteRps.ListaRps[0].InfRps.Tomador = new Layouts.Betha.tcDadosTomador();
-            envio.LoteRps.ListaRps[0].InfRps.Tomador.IdentificacaoTomador = new Layouts.Betha.tcIdentificacaoTomador();
-            envio.LoteRps.ListaRps[0].InfRps.Tomador.IdentificacaoTomador.CpfCnpj = new Layouts.Betha.tcCpfCnpj() { ItemElementName = Layouts.Betha.ItemChoiceType.Cnpj, Item = "09072780000150" };
+            envio.LoteRps.ListaRps[0].InfRps.Tomador = new Layouts.Fortaleza.tcDadosTomador();
+            envio.LoteRps.ListaRps[0].InfRps.Tomador.IdentificacaoTomador = new Layouts.Fortaleza.tcIdentificacaoTomador();
+            envio.LoteRps.ListaRps[0].InfRps.Tomador.IdentificacaoTomador.CpfCnpj = new Layouts.Fortaleza.tcCpfCnpj() { ItemElementName = Layouts.Fortaleza.ItemChoiceType.Cnpj, Item = "09072780000150" };
             envio.LoteRps.ListaRps[0].InfRps.Tomador.RazaoSocial = "Mecanica Boa Viagem";
-            envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco = new Layouts.Betha.tcEndereco();
+            envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco = new Layouts.Fortaleza.tcEndereco();
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco.Endereco = "Rua do comercio";
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco.Numero = "15";
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco.Bairro = "Centro";
@@ -166,23 +166,23 @@ namespace NFSE.Net.Tests
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco.Cep = 88032050;
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Endereco.CepSpecified = true;
 
-            envio.LoteRps.ListaRps[0].InfRps.Tomador.Contato = new Layouts.Betha.tcContato();
+            envio.LoteRps.ListaRps[0].InfRps.Tomador.Contato = new Layouts.Fortaleza.tcContato();
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Contato.Email = "email@email.com.br";
             envio.LoteRps.ListaRps[0].InfRps.Tomador.Contato.Telefone = "32386621";
 
 
-            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento = new Layouts.Betha.tcCondicaoPagamento ();
+            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento = new Layouts.Fortaleza.tcCondicaoPagamento ();
             envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Condicao = "3- A Prazo";
             envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.QtdParcela  = 2;
 
-            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas = new Layouts.Betha.tcParcela[1] { new Layouts.Betha.tcParcela () };
+            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas = new Layouts.Fortaleza.tcParcela[1] { new Layouts.Fortaleza.tcParcela () };
             envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas[0].DataVencimento = DateTime.Now.ToString();
-            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas = new Layouts.Betha.tcParcela[1] { new Layouts.Betha.tcParcela() };
+            envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas = new Layouts.Fortaleza.tcParcela[1] { new Layouts.Fortaleza.tcParcela() };
             envio.LoteRps.ListaRps[0].InfRps.CondicaoPagamento.Parcelas[0].DataVencimento = DateTime.Now.ToString();
 
-            //envio.LoteRps.ListaRps[1].InfRps = new Layouts.Betha.tcInfRps();
+            //envio.LoteRps.ListaRps[1].InfRps = new Layouts.Fortaleza.tcInfRps();
             //envio.LoteRps.ListaRps[1].InfRps.Id = "rps2AA";
-            //envio.LoteRps.ListaRps[1].InfRps.IdentificacaoRps = new Layouts.Betha.tcIdentificacaoRps();
+            //envio.LoteRps.ListaRps[1].InfRps.IdentificacaoRps = new Layouts.Fortaleza.tcIdentificacaoRps();
             //envio.LoteRps.ListaRps[1].InfRps.IdentificacaoRps.Numero = "2";
             //envio.LoteRps.ListaRps[1].InfRps.IdentificacaoRps.Serie = "AA";
             //envio.LoteRps.ListaRps[1].InfRps.IdentificacaoRps.Tipo = 1;
@@ -194,26 +194,26 @@ namespace NFSE.Net.Tests
             //envio.LoteRps.ListaRps[1].InfRps.IncentivadorCultural = 2;
             //envio.LoteRps.ListaRps[1].InfRps.Status = 1;
 
-            //envio.LoteRps.ListaRps[1].InfRps.Servico = new Layouts.Betha.tcDadosServico();
+            //envio.LoteRps.ListaRps[1].InfRps.Servico = new Layouts.Fortaleza.tcDadosServico();
             //envio.LoteRps.ListaRps[1].InfRps.Servico.ItemListaServico = "0105";
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Discriminacao = "Serviço de venda";
             //envio.LoteRps.ListaRps[1].InfRps.Servico.CodigoMunicipio = 4204202;
-            //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores = new Layouts.Betha.tcValores();
+            //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores = new Layouts.Fortaleza.tcValores();
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores.ValorServicos = 1;
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores.IssRetido = 2;
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores.ValorIss = 0.04M;
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores.BaseCalculo = 1;
             //envio.LoteRps.ListaRps[1].InfRps.Servico.Valores.Aliquota = 4;
 
-            //envio.LoteRps.ListaRps[1].InfRps.Prestador = new Layouts.Betha.tcIdentificacaoPrestador();
+            //envio.LoteRps.ListaRps[1].InfRps.Prestador = new Layouts.Fortaleza.tcIdentificacaoPrestador();
             //envio.LoteRps.ListaRps[1].InfRps.Prestador.Cnpj = "03657739000169";
             //envio.LoteRps.ListaRps[1].InfRps.Prestador.InscricaoMunicipal = "24082-6";
 
-            //envio.LoteRps.ListaRps[1].InfRps.Tomador = new Layouts.Betha.tcDadosTomador();
-            //envio.LoteRps.ListaRps[1].InfRps.Tomador.IdentificacaoTomador = new Layouts.Betha.tcIdentificacaoTomador();
-            //envio.LoteRps.ListaRps[1].InfRps.Tomador.IdentificacaoTomador.CpfCnpj = new Layouts.Betha.tcCpfCnpj() { ItemElementName = Layouts.Betha.ItemChoiceType.Cnpj, Item = "09072780000150" };
+            //envio.LoteRps.ListaRps[1].InfRps.Tomador = new Layouts.Fortaleza.tcDadosTomador();
+            //envio.LoteRps.ListaRps[1].InfRps.Tomador.IdentificacaoTomador = new Layouts.Fortaleza.tcIdentificacaoTomador();
+            //envio.LoteRps.ListaRps[1].InfRps.Tomador.IdentificacaoTomador.CpfCnpj = new Layouts.Fortaleza.tcCpfCnpj() { ItemElementName = Layouts.Fortaleza.ItemChoiceType.Cnpj, Item = "09072780000150" };
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.RazaoSocial = "Mecanica Boa Viagem";
-            //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco = new Layouts.Betha.tcEndereco();
+            //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco = new Layouts.Fortaleza.tcEndereco();
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco.Endereco = "Rua do comercio";
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco.Numero = "15";
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco.Bairro = "Centro";
@@ -223,7 +223,7 @@ namespace NFSE.Net.Tests
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco.Cep = 88032050;
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Endereco.CepSpecified = true;
 
-            //envio.LoteRps.ListaRps[1].InfRps.Tomador.Contato = new Layouts.Betha.tcContato();
+            //envio.LoteRps.ListaRps[1].InfRps.Tomador.Contato = new Layouts.Fortaleza.tcContato();
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Contato.Email = "email@email.com.br";
             //envio.LoteRps.ListaRps[1].InfRps.Tomador.Contato.Telefone = "32386621";
             return envio;
@@ -237,7 +237,7 @@ namespace NFSE.Net.Tests
         private void button6_Click(object sender, EventArgs e)
         {
             System.Net.ServicePointManager.Expect100Continue = false;
-            Layouts.Betha.EnviarLoteRpsEnvio envio = RetornarRps();
+            Layouts.Fortaleza.EnviarLoteRpsEnvio envio = RetornarRps();
             Core.Empresa empresa = RetornaEmpresa(false);
 
             var envioCompleto = new Envio.EnvioCompleto();
@@ -264,18 +264,18 @@ namespace NFSE.Net.Tests
                 var empresa = RetornaEmpresa(false);
                 var envio = new NFSE.Net.Envio.Processar();
 
-                var consulta = new NFSE.Net.Layouts.Betha.ConsultarNfsePorRpsEnvio();
-                consulta.IdentificacaoRps = new Layouts.Betha.tcIdentificacaoRps();
+                var consulta = new NFSE.Net.Layouts.Fortaleza.ConsultarNfsePorRpsEnvio();
+                consulta.IdentificacaoRps = new Layouts.Fortaleza.tcIdentificacaoRps();
                 consulta.IdentificacaoRps.Numero = "11";
                 consulta.IdentificacaoRps.Serie = "AA";
                 consulta.IdentificacaoRps.Tipo = 1;
 
-                consulta.Prestador = new Layouts.Betha.tcIdentificacaoPrestador();
+                consulta.Prestador = new Layouts.Fortaleza.tcIdentificacaoPrestador();
                 consulta.Prestador.Cnpj = "03657739000169";
                 consulta.Prestador.InscricaoMunicipal = "24082-6";
 
                 var serializar = new Layouts.Serializador();
-                serializar.SalvarXml<Layouts.Betha.ConsultarNfsePorRpsEnvio>(consulta, caminhoXml);
+                serializar.SalvarXml<Layouts.Fortaleza.ConsultarNfsePorRpsEnvio>(consulta, caminhoXml);
                 envio.ProcessaArquivo(empresa, caminhoXml, "", Servicos.ConsultarNfsePorRps);
 
             }
@@ -295,7 +295,7 @@ namespace NFSE.Net.Tests
                 var envio = new NFSE.Net.Envio.Processar();
                 envio.ProcessaArquivo(empresa, caminhoXml, caminhoSalvar, Servicos.ConsultarNfsePorRps);
                 var serializar = new Layouts.Serializador();
-                var retorno = serializar.LerXml<Layouts.Betha.ConsultarNfseRpsResposta>(caminhoSalvar);
+                var retorno = serializar.LerXml<Layouts.Fortaleza.ConsultarNfseRpsResposta>(caminhoSalvar);
                 System.Diagnostics.Process.Start(retorno.ComplNfse.Nfse.InfNfse.OutrasInformacoes);
             }
             catch (Exception ex)
@@ -313,12 +313,12 @@ namespace NFSE.Net.Tests
 
                 var envio = new Envio.EnvioCompleto();
 
-                Layouts.Betha.CancelarNfseEnvio nfseCancelar = new Layouts.Betha.CancelarNfseEnvio();
-                nfseCancelar.Pedido = new Layouts.Betha.tcPedidoCancelamento();
-                nfseCancelar.Pedido.InfPedidoCancelamento = new Layouts.Betha.tcInfPedidoCancelamento();
+                Layouts.Fortaleza.CancelarNfseEnvio nfseCancelar = new Layouts.Fortaleza.CancelarNfseEnvio();
+                nfseCancelar.Pedido = new Layouts.Fortaleza.tcPedidoCancelamento();
+                nfseCancelar.Pedido.InfPedidoCancelamento = new Layouts.Fortaleza.tcInfPedidoCancelamento();
                 nfseCancelar.Pedido.InfPedidoCancelamento.CodigoCancelamento = "123";
                 nfseCancelar.Pedido.InfPedidoCancelamento.Id = "123";
-                nfseCancelar.Pedido.InfPedidoCancelamento.IdentificacaoNfse = new Layouts.Betha.tcIdentificacaoNfse();
+                nfseCancelar.Pedido.InfPedidoCancelamento.IdentificacaoNfse = new Layouts.Fortaleza.tcIdentificacaoNfse();
                 nfseCancelar.Pedido.InfPedidoCancelamento.IdentificacaoNfse.Cnpj = "03657739000169";
                 nfseCancelar.Pedido.InfPedidoCancelamento.IdentificacaoNfse.CodigoMunicipio = 4204202;
                 nfseCancelar.Pedido.InfPedidoCancelamento.IdentificacaoNfse.InscricaoMunicipal = "4545";
@@ -360,7 +360,7 @@ namespace NFSE.Net.Tests
         {
             frmConsultarLote consultarLote = new frmConsultarLote();
 
-            consultarLote.
+            
         }
     }
 }

@@ -865,7 +865,7 @@
       <CancelarNfse>wsdl\producao\pginfes.wsdl</CancelarNfse>
     </LocalProducao>
   </Estado>
-  <!-- Municípios que utilizam o padrão BETHA -->
+  <!-- Municípios que utilizam o padrão Fortaleza -->
   <Estado ID="4118402" Nome="Paranavaí - PR" UF="PR">
     <LocalHomologacao>
       <RecepcionarLoteRps>wsdl\homologacao\HBethaRecepcionarLoteRps.wsdl</RecepcionarLoteRps>

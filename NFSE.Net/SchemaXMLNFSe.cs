@@ -95,97 +95,97 @@ namespace NFSE.Net
 
             #endregion
 
-            #region Schemas padrão BETHA
+            #region Schemas padrão Fortaleza
 
             #region XML de Consulta de NFSe por Data
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:ConsultarNfseEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:ConsultarNfseEnvio", new InfSchema()
             {
                 Tag = "e:ConsultarNfseEnvio",
                 ID = 22,
-                ArquivoXSD = "NFSe\\BETHA\\servico_consultar_nfse_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_consultar_nfse_envio_v01.xsd",
                 Descricao = "XML de Consulta de NFSe por Data",
                 TagAssinatura = "",
                 TagAtributoId = "",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de Consulta de NFSe por Rps
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:ConsultarNfsePorRpsEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:ConsultarNfsePorRpsEnvio", new InfSchema()
             {
                 Tag = "e:ConsultarNfsePorRpsEnvio",
                 ID = 23,
-                ArquivoXSD = "NFSe\\BETHA\\servico_consultar_nfse_rps_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_consultar_nfse_rps_envio_v01.xsd",
                 Descricao = "XML de Consulta de NFSe por Rps",
                 TagAssinatura = "",
                 TagAtributoId = "",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de Consulta de Lote RPS
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:ConsultarLoteRpsEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:ConsultarLoteRpsEnvio", new InfSchema()
             {
                 Tag = "e:ConsultarLoteRpsEnvio",
                 ID = 5,
-                ArquivoXSD = "NFSe\\BETHA\\servico_consultar_lote_rps_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_consultar_lote_rps_envio_v01.xsd",
                 Descricao = "XML de Consulta de Lote RPS",
                 TagAssinatura = "",
                 TagAtributoId = "",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de Cancelamento de NFS-e
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:CancelarNfseEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:CancelarNfseEnvio", new InfSchema()
             {
                 Tag = "e:CancelarNfseEnvio",
                 ID = 6,
-                ArquivoXSD = "NFSe\\BETHA\\servico_cancelar_nfse_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_cancelar_nfse_envio_v01.xsd",
                 Descricao = "XML de Cancelamento da NFS-e",
                 TagAssinatura = "Pedido",
                 TagAtributoId = "InfPedidoCancelamento",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de Cancelamento de NFS-e
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-CancelarNfseEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-CancelarNfseEnvio", new InfSchema()
             {
                 Tag = "CancelarNfseEnvio",
                 ID = 7,
-                ArquivoXSD = "NFSe\\BETHA\\servico_cancelar_nfse_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_cancelar_nfse_envio_v01.xsd",
                 Descricao = "XML de Cancelamento da NFS-e",
                 TagAssinatura = "Pedido",
                 TagAtributoId = "InfPedidoCancelamento",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de Consulta Situação do Lote RPS
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:ConsultarSituacaoLoteRpsEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:ConsultarSituacaoLoteRpsEnvio", new InfSchema()
             {
                 Tag = "e:ConsultarSituacaoLoteRpsEnvio",
                 ID = 8,
-                ArquivoXSD = "NFSe\\BETHA\\servico_consultar_situacao_lote_rps_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_consultar_situacao_lote_rps_envio_v01.xsd",
                 Descricao = "XML de Consulta da Situacao do Lote RPS",
                 TagAssinatura = "",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 
             #region XML de lote RPS
-            SchemaXML.InfSchemas.Add("NFSE-BETHA-e:EnviarLoteRpsEnvio", new InfSchema()
+            SchemaXML.InfSchemas.Add("NFSE-Fortaleza-e:EnviarLoteRpsEnvio", new InfSchema()
             {
                 Tag = "e:EnviarLoteRpsEnvio",
                 ID = 9,
-                ArquivoXSD = "NFSe\\BETHA\\servico_enviar_lote_rps_envio_v01.xsd",
+                ArquivoXSD = "NFSe\\Fortaleza\\servico_enviar_lote_rps_envio_v01.xsd",
                 Descricao = "XML de Lote RPS",
                 TagAssinatura = "Rps",
                 TagAtributoId = "InfRps",
                 TagLoteAssinatura = "e:EnviarLoteRpsEnvio",
                 TagLoteAtributoId = "LoteRps",
-                TargetNameSpace = "http://www.betha.com.br/e-nota-contribuinte-ws"
+                TargetNameSpace = "http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
             });
             #endregion
 

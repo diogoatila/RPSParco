@@ -450,7 +450,7 @@ namespace NFSE.Net
 
         #endregion
 
-        #region Objeto da BETHA Sistemas para acessar os WebServices da NFSe
+        #region Objeto da Fortaleza Sistemas para acessar os WebServices da NFSe
         public IFortaleza Fortaleza;
         #endregion
 

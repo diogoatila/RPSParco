@@ -142,8 +142,8 @@ namespace NFSE.Net.Envio
                     break;
                 #endregion
 
-                #region BETHA
-                case PadroesNFSe.BETHA:
+                #region Fortaleza
+                case PadroesNFSe.Fortaleza:
                     switch (servico)
                     {
                         case Servicos.ConsultarLoteRps:
@@ -412,8 +412,8 @@ namespace NFSE.Net.Envio
                     break;
                 #endregion
 
-                #region BETHA
-                case PadroesNFSe.BETHA:
+                #region Fortaleza
+                case PadroesNFSe.Fortaleza:
                     switch (servico)
                     {
                         case Servicos.ConsultarLoteRps:

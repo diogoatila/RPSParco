@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<definitions name='RecepcionarLoteRpsService' targetNamespace='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:ns1='http://www.w3.org/2000/09/xmldsig#' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+<definitions name='RecepcionarLoteRpsService' targetNamespace='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:ns1='http://www.w3.org/2000/09/xmldsig#' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
  <types>
-  <xs:schema targetNamespace='http://www.w3.org/2000/09/xmldsig#' version='1.0' xmlns:ns1='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns:tns='http://www.w3.org/2000/09/xmldsig#' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
-   <xs:import namespace='http://www.betha.com.br/e-nota-contribuinte-ws'/>
+  <xs:schema targetNamespace='http://www.w3.org/2000/09/xmldsig#' version='1.0' xmlns:ns1='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns:tns='http://www.w3.org/2000/09/xmldsig#' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:import namespace='http://www.Fortaleza.com.br/e-nota-contribuinte-ws'/>
    <xs:element name='CanonicalizationMethod' type='tns:tcCanonicalizationMethod'/>
    <xs:element name='DigestMethod' type='tns:tcDigestMethod'/>
    <xs:element name='DigestValue' type='xs:string'/>
@@ -42,7 +42,7 @@
    </xs:complexType>
    <xs:attribute name='Algorithm' type='xs:string'/>
   </xs:schema>
-  <xs:schema targetNamespace='http://www.betha.com.br/e-nota-contribuinte-ws' version='1.0' xmlns:ns1='http://www.w3.org/2000/09/xmldsig#' xmlns:tns='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:schema targetNamespace='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' version='1.0' xmlns:ns1='http://www.w3.org/2000/09/xmldsig#' xmlns:tns='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
    <xs:import namespace='http://www.w3.org/2000/09/xmldsig#'/>
    <xs:element name='EnviarLoteRpsEnvio' type='tns:EnviarLoteRpsEnvio'/>
    <xs:element name='EnviarLoteRpsEnvioResponse' type='tns:EnviarLoteRpsEnvioResponse'/>
@@ -267,7 +267,7 @@
  </binding>
  <service name='RecepcionarLoteRpsService'>
   <port binding='tns:RecepcionarLoteRpsBinding' name='RecepcionarLoteRpsPort'>
-   <soap:address location='https://e-gov.betha.com.br/e-nota-contribuinte-test-ws/recepcionarLoteRps'/>
+   <soap:address location='https://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/recepcionarLoteRps'/>
   </port>
  </service>
 </definitions>

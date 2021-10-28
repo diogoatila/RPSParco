@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            targetNamespace="http://www.betha.com.br/e-nota-contribuinte-ws"
-            xmlns="http://www.betha.com.br/e-nota-contribuinte-ws/shema/nfse_v01.xsd"
+            targetNamespace="http://www.Fortaleza.com.br/e-nota-contribuinte-ws"
+            xmlns="http://www.Fortaleza.com.br/e-nota-contribuinte-ws/shema/nfse_v01.xsd"
             xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" attributeFormDefault="unqualified" elementFormDefault="qualified">
 
 <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>

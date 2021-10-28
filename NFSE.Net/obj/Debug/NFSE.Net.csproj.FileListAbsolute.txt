@@ -10,3 +10,15 @@ C:\Users\ThinkPad\Desktop\NFSe.Net-master\NFSE.Net\obj\Debug\NFSE.Net.csproj.Cor
 C:\Users\ThinkPad\Desktop\NFSe.Net-master\NFSE.Net\obj\Debug\NFSE.Net.csproj.CopyComplete
 C:\Users\ThinkPad\Desktop\NFSe.Net-master\NFSE.Net\obj\Debug\NFSE.Net.dll
 C:\Users\ThinkPad\Desktop\NFSe.Net-master\NFSE.Net\obj\Debug\NFSE.Net.pdb
+C:\Projetos\ParcoRps\NFSE.Net\obj\Debug\NFSE.Net.csproj.AssemblyReference.cache
+C:\Projetos\ParcoRps\NFSE.Net\obj\Debug\NFSE.Net.csproj.CoreCompileInputs.cache
+C:\Projetos\ParcoRps\NFSE.Net\obj\Debug\NFSE.Net.dll
+C:\Projetos\ParcoRps\NFSE.Net\obj\Debug\NFSE.Net.pdb
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\NFSE.Net.dll.config
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\NFSE.Net.dll
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\NFSE.Net.pdb
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Projetos\ParcoRps\NFSE.Net\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Projetos\ParcoRps\NFSE.Net\obj\Debug\NFSE.Net.csproj.CopyComplete

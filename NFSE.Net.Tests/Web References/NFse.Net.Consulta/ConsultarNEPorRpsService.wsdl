@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.betha.com.br/e-nota-contribuinte-ws" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" name="ConsultarNEPorRpsService" targetNamespace="http://www.betha.com.br/e-nota-contribuinte-ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.Fortaleza.com.br/e-nota-contribuinte-ws" xmlns:ns1="http://www.w3.org/2000/09/xmldsig#" name="ConsultarNEPorRpsService" targetNamespace="http://www.Fortaleza.com.br/e-nota-contribuinte-ws" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
-    <xs:schema xmlns:tns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns1="http://www.betha.com.br/e-nota-contribuinte-ws" targetNamespace="http://www.w3.org/2000/09/xmldsig#" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-      <xs:import namespace="http://www.betha.com.br/e-nota-contribuinte-ws" />
+    <xs:schema xmlns:tns="http://www.w3.org/2000/09/xmldsig#" xmlns:ns1="http://www.Fortaleza.com.br/e-nota-contribuinte-ws" targetNamespace="http://www.w3.org/2000/09/xmldsig#" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.Fortaleza.com.br/e-nota-contribuinte-ws" />
       <xs:element name="CanonicalizationMethod" type="tns:tcCanonicalizationMethod" />
       <xs:element name="DigestMethod" type="tns:tcDigestMethod" />
       <xs:element name="DigestValue" type="xs:string" />
@@ -42,7 +42,7 @@
       </xs:complexType>
       <xs:attribute name="Algorithm" type="xs:string" />
     </xs:schema>
-    <xs:schema targetNamespace="http://www.betha.com.br/e-nota-contribuinte-ws" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:schema targetNamespace="http://www.Fortaleza.com.br/e-nota-contribuinte-ws" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
       <xs:import namespace="http://www.w3.org/2000/09/xmldsig#" />
       <xs:element name="ConsultarNfsePorRpsEnvio" type="tns:ConsultarNfsePorRpsEnvio" />
       <xs:element name="ConsultarNfsePorRpsEnvioResponse" type="tns:ConsultarNfsePorRpsEnvioResponse" />
@@ -358,7 +358,7 @@
   </binding>
   <service name="ConsultarNEPorRpsService">
     <port name="ConsultarNEPorRpsPort" binding="tns:ConsultarNEPorRpsBinding">
-      <soap:address location="http://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarNfsePorRps" />
+      <soap:address location="http://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarNfsePorRps" />
     </port>
   </service>
 </definitions>

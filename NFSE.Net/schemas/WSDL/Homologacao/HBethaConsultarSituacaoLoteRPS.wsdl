@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<definitions name='ConsultarSituacaoLoteRpsService' targetNamespace='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+<definitions name='ConsultarSituacaoLoteRpsService' targetNamespace='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
  <types>
-  <xs:schema targetNamespace='http://www.betha.com.br/e-nota-contribuinte-ws' version='1.0' xmlns:tns='http://www.betha.com.br/e-nota-contribuinte-ws' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+  <xs:schema targetNamespace='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' version='1.0' xmlns:tns='http://www.Fortaleza.com.br/e-nota-contribuinte-ws' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
    <xs:element name='ConsultarSituacaoLoteRpsEnvio' type='tns:ConsultarSituacaoLoteRpsEnvio'/>
    <xs:element name='ConsultarSituacaoLoteRpsEnvioResponse' type='tns:ConsultarSituacaoLoteRpsEnvioResponse'/>
    <xs:complexType name='ConsultarSituacaoLoteRpsEnvio'>
@@ -68,7 +68,7 @@
  </binding>
  <service name='ConsultarSituacaoLoteRpsService'>
   <port binding='tns:ConsultarSituacaoLoteRpsBinding' name='ConsultarSituacaoLoteRpsPort'>
-   <soap:address location='https://e-gov.betha.com.br/e-nota-contribuinte-test-ws/consultarSituacaoLoteRps'/>
+   <soap:address location='https://e-gov.Fortaleza.com.br/e-nota-contribuinte-test-ws/consultarSituacaoLoteRps'/>
   </port>
  </service>
 </definitions>

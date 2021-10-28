@@ -71,13 +71,13 @@ namespace NFSE.Net
 
             // Definir Proxy
             if (ConfiguracaoApp.Proxy)
-                if (padraoNFSe != PadroesNFSe.BETHA)
+                if (padraoNFSe != PadroesNFSe.Fortaleza)
                 {
                     oWSProxy.SetProp(oServicoWS, "Proxy", Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta));
                 }
                 else
                 {
-                    oWSProxy.Betha.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
+                    oWSProxy.Fortaleza.Proxy = Proxy.DefinirProxy(ConfiguracaoApp.ProxyServidor, ConfiguracaoApp.ProxyUsuario, ConfiguracaoApp.ProxySenha, ConfiguracaoApp.ProxyPorta);
                 }
 
             // Limpa a variável de retorno
@@ -85,38 +85,38 @@ namespace NFSE.Net
 
             //Vou mudar o timeout para evitar que demore a resposta e o uninfe aborte antes de recebe-la. Wandrey 17/09/2009
             //Isso talvez evite de não conseguir o número do recibo se o serviço do SEFAZ estiver lento.
-            if (padraoNFSe != PadroesNFSe.BETHA)
+            if (padraoNFSe != PadroesNFSe.Fortaleza)
                 oWSProxy.SetProp(oServicoWS, "Timeout", 60000);
                      
             //Invocar o membro
             switch (padraoNFSe)
             {
-                #region Padrão BETHA
-                case PadroesNFSe.BETHA:
+                #region Padrão Fortaleza
+                case PadroesNFSe.Fortaleza:
                     switch (cMetodo)
                     {
                         case "ConsultarSituacaoLoteRps":
-                            strRetorno = oWSProxy.Betha.ConsultarSituacaoLoteRps(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.ConsultarSituacaoLoteRps(docXML, empresa.tpAmb);
                             break;
 
                         case "ConsultarLoteRps":
-                            strRetorno = oWSProxy.Betha.ConsultarLoteRps(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.ConsultarLoteRps(docXML, empresa.tpAmb);
                             break;
 
                         case "CancelarNfse":
-                            strRetorno = oWSProxy.Betha.CancelarNfse(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.CancelarNfse(docXML, empresa.tpAmb);
                             break;
 
                         case "ConsultarNfse":
-                            strRetorno = oWSProxy.Betha.ConsultarNfse(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.ConsultarNfse(docXML, empresa.tpAmb);
                             break;
 
                         case "ConsultarNfsePorRps":
-                            strRetorno = oWSProxy.Betha.ConsultarNfsePorRps(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.ConsultarNfsePorRps(docXML, empresa.tpAmb);
                             break;
 
                         case "RecepcionarLoteRps":
-                            strRetorno = oWSProxy.Betha.RecepcionarLoteRps(docXML, empresa.tpAmb);
+                            strRetorno = oWSProxy.Fortaleza.RecepcionarLoteRps(docXML, empresa.tpAmb);
                             break;
                     }
                     break;
